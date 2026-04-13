@@ -41,7 +41,7 @@ class TodoController extends Controller
     {
         $todo->update([
             'task' => $request->task,
-            'is_done' => $request->has('is_done')
+            'is_done' => $request->input('is_done') == '1'
         ]);
 
         return redirect('/')->with('success', 'Todo updated!');

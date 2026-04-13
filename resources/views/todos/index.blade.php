@@ -9,6 +9,19 @@
             background: #f2f2f2;
         }
 
+        .edit-btn {
+        display: inline-block;
+        padding: 8px 12px;
+        background: #38bdf8; 
+        color: white;
+        border-radius: 6px;
+        font-size: 12px;
+        }
+
+        .edit-btn:hover {
+            background: #0ea5e9; 
+        }
+
         .container {
             width: 400px;
             margin: 80px auto;
@@ -23,7 +36,7 @@
             margin-bottom: 15px;
         }
 
-        /* BLUE BUTTON (Add + Edit style) */
+        
         .add-btn {
             display: inline-block;
             margin-bottom: 15px;
@@ -67,7 +80,7 @@
             text-decoration: underline;
         }
 
-        /* DELETE BUTTON (RED) */
+       
         .delete-btn {
             margin-top: 8px;
             padding: 8px 12px;
@@ -110,7 +123,7 @@
                 @endif
             </p>
 
-            <a href="/edit/{{ $todo->id }}">Edit</a>
+            <a href="/edit/{{ $todo->id }}" class="edit-btn">Edit</a>
 
             <form action="/delete/{{ $todo->id }}" method="POST">
                 @csrf
